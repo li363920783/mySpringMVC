@@ -16,8 +16,8 @@ public class TestController {
     @MyRequestMapping("/test")
     public String testHello(){
         System.out.println("执行controller");
-        System.out.println("老子成功啦!");
-        return "index";
+
+        return "success";
     }
 
 

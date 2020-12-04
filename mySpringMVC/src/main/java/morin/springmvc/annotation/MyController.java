@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 /**
  * controller注解 作用目标为类
  * 作用范围:运行时
+ * @author Morin
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

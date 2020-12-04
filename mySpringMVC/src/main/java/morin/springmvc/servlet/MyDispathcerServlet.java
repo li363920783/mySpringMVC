@@ -26,7 +26,7 @@ import java.util.*;
  */
 public class MyDispathcerServlet extends HttpServlet {
     /**
-     * 模拟IDC容器,保存bean对象
+     * 模拟IOC容器,保存bean对象
      */
     private Map<String, Object> iocContainer = new HashMap<String, Object>();
     /**
@@ -57,7 +57,7 @@ public class MyDispathcerServlet extends HttpServlet {
         SAXReader saxReader = new SAXReader();
         try {
             //解析springMVC.xml
-            String path = config.getServletContext().getRealPath("") + "\\WEB-INF\\classes\\" + config.getInitParameter("contextConfigLocation");
+            String path = config.getServletContext().getRealPath("") + "/WEB-INF/classes/" + config.getInitParameter("contextConfigLocation");
             Document document = saxReader.read(path);
             Element root = document.getRootElement();
             Iterator iterator = root.elementIterator();
@@ -129,7 +129,7 @@ public class MyDispathcerServlet extends HttpServlet {
         SAXReader saxReader = new SAXReader();
         try {
             //获取xml路径
-            String path = config.getServletContext().getRealPath("") + "\\WEB-INF\\classes\\" + config.getInitParameter("contextConfigLocation");
+            String path = config.getServletContext().getRealPath("") + "/WEB-INF/classes/" + config.getInitParameter("contextConfigLocation");
             //获取document
             Document document = saxReader.read(path);
             //获取根元素
